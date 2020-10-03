@@ -29,7 +29,7 @@ function setup() {
 
 function draw() {
 
-  background("red");
+  background(color(230,230,230));
   
   paper.display();
   binPartB.display();
