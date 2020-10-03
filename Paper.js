@@ -1,11 +1,12 @@
-class Bob{
+class Paper{
 
-	constructor(x,y,radius,isStatic){
+	constructor(x,y,radius){
 
-		var paperOpt = {isStatic:isStatic,restitution:0,friction:0,density:1}
-		ellipseMode(RADIUS);
+		var paperOpt = {isStatic:false,restitution:0.3,friction:0.5,density:1.2}
+		imageMode(CENTER);
 		this.body = Bodies.circle(x,y,radius,paperOpt);
 		this.radius = radius;
+		this.image = loadImage("Sprites/paper.png");
 		World.add(world,this.body);
 		this.pos = this.body.position;
 	}
@@ -13,10 +14,9 @@ class Bob{
 	display(){
 		var angle = this.body.angle;
 		push();
-		fill("pink");
 		translate(this.pos.x,this.pos.y);
 		rotate(angle);
-		ellipse(0,0,this.radius,this.radius);
+		image(this.image,0,0,this.radius*2+5,this.radius*2+12);
 		pop();
 
 	}
