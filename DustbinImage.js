@@ -6,7 +6,7 @@ class DustbinImage{
 		this.height = height;
 		this.x = x;
 		this.y = y;
-		this.image = loadImage("Sprites/dustbin.png");
+		this.image = loadImage("Sprites/Dustbin.png");
 	}
 
 	display(){
